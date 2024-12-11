@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Data Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">NBA Data Explorer</div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Explore NBA Data</h1>
+            <p>Browse seasons, leagues, upcoming games by date, and search for players.</p>
+        </div>
+    </section>
+
+    <main class="section-container">
+        <section id="seasons">
+            <h2>Available Seasons</h2>
+            <button onclick="fetchSeasons()">Load Seasons</button>
+            <ul id="seasons-list"></ul>
+        </section>
+
+        <section id="leagues">
+            <h2>Available Leagues</h2>
+            <button onclick="fetchLeagues()">Load Leagues</button>
+            <ul id="leagues-list"></ul>
+        </section>
+
+        <section id="games-by-date">
+            <h2>Games by Date</h2>
+            <input type="text" id="dateInput" placeholder="YYYY-MM-DD" value="2022-02-12">
+            <button onclick="fetchGamesByDate()">Load Games</button>
+            <ul id="games-list"></ul>
+        </section>
+
+        <section id="player-search">
+            <h2>Search Players</h2>
+            <input type="text" id="playerSearchInput" placeholder="e.g. james">
+            <button onclick="searchPlayers()">Search</button>
+            <ul id="players-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NBA Data Explorer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
